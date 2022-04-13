@@ -18,21 +18,21 @@ public class TrailCollider : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        SetEdgeCollider(myLine);
-    }
+    //void Update()
+    //{
+    //    SetEdgeCollider(myLine);
+    //}
 
-    void SetEdgeCollider(TrailRenderer trailRenderer)
-    {
-        List<Vector2> edges = new List<Vector2>();
+    //void SetEdgeCollider(TrailRenderer trailRenderer)
+    //{
+    //    List<Vector2> edges = new List<Vector2>();
 
-        for (int point = 0; point < trailRenderer.positionCount; point++)
-        {
-            Vector3 lineRendererPoint = trailRenderer.GetPosition(point);
-            edges.Add(new Vector2(trailRendererPoint.x, trailRendererPoint.y));
-        }
+    //    for (int point = 0; point < trailRenderer.positionCount; point++)
+    //    {
+    //        Vector3 lineRendererPoint = trailRenderer.GetPosition(point);
+    //        edges.Add(new Vector2(trailRendererPoint.x, trailRendererPoint.y));
+    //    }
 
-        edgeCollider.SetPoints(edges);
-    }
+    //    edgeCollider.SetPoints(edges);
+    //}
 }

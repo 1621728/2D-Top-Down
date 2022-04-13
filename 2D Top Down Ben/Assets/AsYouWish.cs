@@ -31,6 +31,6 @@ public class AsYouWish : MonoBehaviour
             edges.Add(new Vector2(lineRendererPoint.x, lineRendererPoint.y));
         }
 
-        edgeCollider.SetEdges(edges);
+        
     }
 }
