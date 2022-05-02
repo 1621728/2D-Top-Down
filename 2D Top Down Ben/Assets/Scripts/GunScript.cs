@@ -8,9 +8,7 @@ public class GunScript : MonoBehaviour{
     public float BulletSpeed;
     public Transform ShootPoint;
     Vector2 Direction;
-    public LineRenderer line;
     GameObject target;
-    public SpringJoint2D spring;
     public AudioSource audios;
     public AudioSource Sound;
     public GameObject shootParticle;
@@ -23,8 +21,7 @@ public class GunScript : MonoBehaviour{
     // Start is called before the first frame update
     void Start()
     {
-        line.enabled = false;
-        spring.enabled = false;
+
     }
 
     // Update is called once per frame
@@ -48,12 +45,6 @@ public class GunScript : MonoBehaviour{
             Release();
         }
 
-            if (target != null)
-        {
-            line.SetPosition(0, ShootPoint.position);
-            line.SetPosition(1,target.transform.position);
-        }
-
         
     }
 
@@ -74,16 +65,11 @@ public class GunScript : MonoBehaviour{
     public void TargetHit(GameObject hit)
     {
         target = hit;
-        line.enabled = true;
-        spring.enabled = true;
-        spring.connectedBody = target.GetComponent<Rigidbody2D>();
         Sound.Play();
     }
 
     void Release()
     {
-        line.enabled = false;
-        spring.enabled = false;
         target = null;
     }
 }

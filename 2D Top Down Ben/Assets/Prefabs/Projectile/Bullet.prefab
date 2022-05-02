@@ -471,4 +471,4 @@ MonoBehaviour:
   bullet: {fileID: 8658767070957967487}
   aud: {fileID: 6048092160937773372}
   collide: {fileID: 6165533559934704674, guid: 1128422bb54c5234095e29a80130ba7b, type: 3}
-  dizzySpeed: -23.29
+  dizzySpeed: 0
