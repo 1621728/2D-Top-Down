@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class BulletScript : MonoBehaviour
 {
-    GunScript gun;
     public GameObject bullet;
     public AudioSource aud;
     public GameObject collide;
@@ -38,16 +37,16 @@ public class BulletScript : MonoBehaviour
 
     private void Update()
     {
-        if (rb2.velocity.magnitude != dizzySpeed)
-        {
-            aud.Play();
-            Instantiate(collide, bullet.transform);
-        }
-        if (rb2.velocity.magnitude != -dizzySpeed)
-        {
-            aud.Play();
-            Instantiate(collide, bullet.transform);
-        }
+        //if (rb2.velocity.magnitude != dizzySpeed)
+        //{
+        //    aud.Play();
+        //    Instantiate(collide, bullet.transform);
+        //}
+        //if (rb2.velocity.magnitude != -dizzySpeed)
+        //{
+        //    aud.Play();
+        //    Instantiate(collide, bullet.transform);
+        //}
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
